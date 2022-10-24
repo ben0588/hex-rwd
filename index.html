@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新增 icon -->
+    <link rel="shortcut icon" href="./images/1664840138.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./images/1664840138.ico" />
+    <!-- 載入 reset + 各設定 -->
+    <link rel="stylesheet" href="./css/all.css">
+    <!-- 引用 google 字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+    <!-- 引用 aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 新增 meat 標籤內容 -->
+    <meta name="description" content="六角西餐廳、六角學院、RWD、響應式、前端設計、前端工程師、HTML、CSS、JavaScript">
+    <meta name="keywords" content="六角西餐廳,六角學院,RWD,響應式,前端設計,前端工程師,HTML,CSS,JavaScript">
+
+    <meta property="og:title" content="六角學院" />
+    <meta property="og:description" content="六角學院" />
+    <meta property="og:type" content='website' />
+    <meta property="og:url" content="https://www.hexschool.com/" />
+    <meta property="og:image" content="https://www.hexschool.com/" />
+    <meta name="title" content="六角學院RWD最終練習-Ben">
+    <meta name="author" content="六角學院RWD最終練習-Ben">
+    <meta name="subject" content="六角學院RWD最終練習,六角學院RWD最終練習-Ben">
+    <meta name="language" content="Tradition Chinese">
+    <meta name="Content-Language" content="Tradition Chinese">
+    <meta name="robots" content="All">
+    <meta name="audience" content="all">
+    <title>六角學院RWD最終練習</title>
+</head>
+
+<body>
+
+    <!-- 
+        六角學院: RWD 最終作業任務
+            此作業目標練習設計RWD、共有768、767、568、414、320px斷點設計
+
+        作業評分標準:
+            一、語意命名設計
+                1- HTML 語意結構設計
+                2- CSS class 命名設計
+                3- head 資訊設計
+            二、網頁排版設計
+                1-圖片細節處理
+                2-網頁元素設計
+                3-網頁斷點規則
+            三、使用者體驗
+                1-版型動線規則
+                2-圖文排版細節
+                3-元素點擊便利性
+                4-載具特性設計 ( hover、focus )
+
+        紀錄時間: 10/21 00:00 ~  07:00 暫停休息 (累計7小時)
+        第二次製作: 10/24 03:16 ~ 07:00 完成index.html (累計4小時)
+        第三次製作: 10/24 07:15 ~ 13:16 完成cart.html (累計6小時)
+        第四次製作: 10/25 01:28 ~ 02:35 完成login.html (累計1小時)
+        第五次製作: 10/25 02:50 ~ 03:30 完成register.html (累計40分鐘)
+        最後檢查 & 優化: 03:30~ 03:50 (累計20分鐘) 
+
+        最終累計製作時間 19 小時
+     -->
+
+    <header class="header">
+        <h1><a aria-current="page" target='_self' href="./index.html" class="logo">六角西餐廳</a></h1>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu-items"><a aria-current="page" target='_self' href="./cart.html"
+                        class="menu-text">購物車</a>
+                </li>
+                <li class="menu-items"><a aria-current="page" target='_self' href="./login.html"
+                        class="menu-text">登入</a></li>
+                <li class="menu-items"><a aria-current="page" target='_self' href="./register.html"
+                        class="menu-text">註冊</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="toggle-menu ">選單</a>
+    </header>
+    <section class="banner">
+        <!-- 使用background:url('')連接不出來，所以使用 img tag 製作 -->
+        <img src="./images/header_desktop.png" class="banner-desktop" alt="banner-desktop">
+        <img src="./images/header_mobile.png" class="banner-mobile" alt="banner-mobile">
+        <article class="slogan">
+            <hgroup>
+                <h2 class="main-title">咬一口就無法忘懷的漢堡</h2>
+                <h2 class="main-title_mobile">咬一口<br />就無法忘懷的漢堡</h2>
+                <h3 class="subtopic-title">七夕絕對無法錯過的好滋味<br /><img src="./images/8723191_dining_food_icon.svg"
+                        alt="dining-icon"> 六角大漢堡 <img src="./images/8723191_dining_food_icon.svg" alt="dining-icon">
+                </h3>
+            </hgroup>
+        </article>
+    </section>
+
+    <main class="main">
+        <section class="advantage">
+            <h2 class="advantage-title" data-aos="zoom-out">
+                客人總是在詢問
+                <span class="advantage-subtitle">這麼好吃的秘訣是什麼</span>
+            </h2>
+
+            <div class="advantage-container">
+                <section class="advantage-items" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    <img src="./images//feature_1.png" alt="台灣本土蔬菜" class="advantage-items-img">
+                    <h3 class="advantage-items-title">
+                        台灣本土蔬菜
+                    </h3>
+                    <p class="advantage-items-text">
+                        In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et
+                        elit eget elit facilisis tristique. Nam vel iaculis mauris.
+                    </p>
+                </section>
+                <section class="advantage-items" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    <img src="./images//feature_2.png" alt="專業米其林廚師" class="advantage-items-img">
+                    <h3 class="advantage-items-title">
+                        專業米其林廚師
+                    </h3>
+                    <p class="advantage-items-text">
+                        Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit,
+                        eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
+                    </p>
+                </section>
+                <section class="advantage-items" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-easing="ease-in-sine">
+                    <img src="./images//feature_3.png" alt="對於專業不能退讓" class="advantage-items-img">
+                    <h3 class="advantage-items-title">
+                        對於專業不能退讓
+                    </h3>
+                    <p class="advantage-items-text">
+                        Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh
+                        quis, facilisis accumsan turpis.
+                    </p>
+                </section>
+            </div>
+        </section>
+
+
+        <section class="chef">
+            <img src="./images/main_chef_brown.png" alt="Tody Chef: Plum in Shock" class="chef-img"
+                data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="1000" data-aos-duration="1500">
+            <article class="chef-container">
+                <h2 class="chef-title">今日主廚：帕金森、梅在帕
+                    <span class="chef-subtitle">Tody Chef: Plum in Shock</span>
+                </h2>
+                <p class="chef-text">
+                    Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam
+                    elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui
+                    sed,
+                    ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum.
+                    Aliquam
+                    eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius.
+                    Donec
+                    sit amet ligula eget nisi sodales egestas. Aliquam interdum dolor aliquet dolor sollicitudin
+                    fermentum.
+                    Donec congue lorem a molestie bibendum.
+                </p>
+            </article>
+        </section>
+
+
+        <section class="comment" data-aos="fade-up" data-aos-duration="3000">
+            <h3 class="comment-title">
+                聽聽別人的感想
+            </h3>
+            <div class="comment-container">
+                <div class="comment-items">
+                    <img src="./images/avatar_1.png" alt="avatar" class="comment-img">
+                    <section class="comment-items-content">
+                        <h4 class="comment-items-title">高雄一口吃</h4>
+                        <p class="comment-items-text">自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+                        <p class="comment-items-name"> -- 產品經理</p>
+                    </section>
+                </div>
+                <div class="comment-items">
+                    <img src="./images/avatar_2.png" alt="avatar" class="comment-img">
+                    <section class="comment-items-content">
+                        <h4 class="comment-items-title">廟口小霸王</h4>
+                        <p class="comment-items-text">自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+                        <p class="comment-items-name"> -- 金身道士</p>
+                    </section>
+                </div>
+                <div class="comment-items">
+                    <img src="./images/avatar_3.png" alt="avatar" class="comment-img">
+                    <section class="comment-items-content">
+                        <h4 class="comment-items-title">春天也來了</h4>
+                        <p class="comment-items-text">自從吃了這家餐廳以後，我口水連續流了一個多月都沒停，下次不要再被我遇到，不然我一定連他們桌子都啃下去。</p>
+                        <p class="comment-items-name"> -- 美麗萬分</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="booking">
+            <h2 class="booking-title" data-aos="zoom-out-left">
+                我們的位置不太夠坐
+                <br />
+                要不要先定位呢？
+            </h2>
+            <section class="booking-container">
+                <iframe class="booking-map"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14561.12891656417!2d120.6468631!3d24.1618329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c5e7459c2aaf71a!2z6Ie65Lit5biC5pS_5bqc!5e0!3m2!1szh-TW!2stw!4v1664543172932!5m2!1szh-TW!2stw"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <form action="#" class="booking-form">
+                    <fieldset>
+                        <label for="booking-form-name">姓名</label>
+                        <input class="booking-form-name" id="booking-form-name" type="text" placeholder="六角講師吃尾牙">
+                        <label for="booking-form-tel">電話</label>
+                        <input class="booking-form-tel" id="booking-form-tel" type="tel" pattern="[0-9]{2}-[0-9]{7}"
+                            placeholder="02-1234567">
+                        <label for="booking-form-mail">信箱</label>
+                        <input class="booking-form-mail" id="booking-form-mail" type="mail"
+                            placeholder="test@gmail.com">
+                        <label for="booking-form-number">人數</label>
+                        <input class="booking-form-number" id="booking-form-number" type="number">
+
+                        <label for="booking-form-vegetables">是否需要素食</label>
+                        <span>是</span>
+                        <input class="booking-form-vegetables" id="booking-form-vegetables" name="vegetables"
+                            type="radio">
+                        <span>否</span>
+                        <input class="booking-form-vegetables" id="booking-form-vegetables" name="vegetables"
+                            type="radio">
+
+                        <br />
+                        <button class="booking-cancel-btn">取消</button>
+                        <input class="booking-submit-btn" type="submit" value="送出">
+                    </fieldset>
+                </form>
+            </section>
+
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="about">
+            <h4 class="about-title">關於 六角西餐廳</h3>
+                <p class="about-text">Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat
+                    augue enim,
+                    pulvinar
+                    lobortis nibh lacinia at. </p>
+        </section>
+        <section class="connection">
+            <h4 class="connection-title">聯絡方式</h3>
+                <ul class="connection-list">
+                    <li class="connection-items"><a class="connection-text"
+                            href="https://www.google.com/maps/place/826%E9%AB%98%E9%9B%84%E5%B8%82%E6%A2%93%E5%AE%98%E5%8D%80%E4%B8%AD%E6%AD%A3%E4%BA%94%E8%A1%97/data=!4m2!3m1!1s0x346e0f4beb9c751f:0x5c75382ab0d25c9c?sa=X&ved=2ahUKEwiD467Aw-_6AhXNet4KHWvdDEUQ8gF6BAgOEAE"
+                            target="_black">•
+                            高雄市中正五路到底</a></li>
+                    <li class="connection-items"><a class="connection-text" href="tel:+886 886 886">• +886 886 886</a>
+                    </li>
+                    <li class="connection-items"><a class="connection-text" href="mailto:service@hexschool.com">•
+                            service@hexschool.com</a></li>
+                </ul>
+        </section>
+        <section class="community">
+            <h2 class="community-title">六角西餐廳</h2>
+            <ul class="community-icon">
+                <li><a href="https://www.hexschool.com/" target="_black" class="community-icon-google">google+</a></li>
+                <li><a href="https://twitter.com/hexschool1" target="_black" class="community-icon-twitter">twitter</a>
+                </li>
+                <li><a href="https://www.facebook.com/hexschool/" target="_black"
+                        class="community-icon-facebook">facebook</a></li>
+            </ul>
+
+        </section>
+    </footer>
+    <!-- 載入 JavaScript 設定，html5預設type="text/javascript" -->
+    <script src="./js/all.js"></script>
+</body>
+
+</html>
