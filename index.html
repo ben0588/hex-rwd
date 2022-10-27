@@ -65,6 +65,8 @@
         最後檢查 & 優化: 03:30~ 03:50 (累計20分鐘) 
 
         最終累計製作時間 19 小時
+
+        樣板網址:https://hexschool.github.io/Rwd_sketch_export/#artboard0
      -->
 
     <header class="header">
@@ -84,6 +86,11 @@
     </header>
     <section class="banner">
         <!-- 使用background:url('')連接不出來，所以使用 img tag 製作 -->
+        <!-- 
+            助教看到同學嘗試使用 background:url() 設置 banner 的筆記，
+            提醒同學因為 all.css 檔案在 css 資料夾當中，若只使用 ./ 進行連結，
+            電腦會在 css 資料夾中搜尋檔案，所以要再加一個點 ../ 便能往上跳一層，找到正確的路徑。
+         -->
         <img src="./images/header_desktop.png" class="banner-desktop" alt="banner-desktop">
         <img src="./images/header_mobile.png" class="banner-mobile" alt="banner-mobile">
         <article class="slogan">
@@ -104,6 +111,16 @@
                 <span class="advantage-subtitle">這麼好吃的秘訣是什麼</span>
             </h2>
 
+            <!-- 
+                相同性質的內容可以用 ul li 結構表示，例如：首頁 .advantage-container 
+                和三個 .advantage-items 建議改為 ul li 結構，其他類似的主題式列表都建議調整為 ul li
+
+                    <ul class="advantage-container">
+                    　<li class="advantage-items">...</li>
+                    　<li class="advantage-items">...</li>
+                    　<li class="advantage-items">...</li>      
+                    </ul>
+             -->
             <div class="advantage-container">
                 <section class="advantage-items" data-aos="fade-up" data-aos-duration="1000"
                     data-aos-easing="ease-in-sine">
@@ -222,13 +239,14 @@
                         <label for="booking-form-number">人數</label>
                         <input class="booking-form-number" id="booking-form-number" type="number">
 
+                        <!-- 同學可以嘗試在首頁 booking-form-vegetables. radio input 加入 checked 屬性，可以預設特定選項被勾選。 -->
                         <label for="booking-form-vegetables">是否需要素食</label>
                         <span>是</span>
                         <input class="booking-form-vegetables" id="booking-form-vegetables" name="vegetables"
                             type="radio">
                         <span>否</span>
                         <input class="booking-form-vegetables" id="booking-form-vegetables" name="vegetables"
-                            type="radio">
+                            type="radio" checked>
 
                         <br />
                         <button class="booking-cancel-btn">取消</button>
@@ -255,12 +273,12 @@
                 <ul class="connection-list">
                     <li class="connection-items"><a class="connection-text"
                             href="https://www.google.com/maps/place/826%E9%AB%98%E9%9B%84%E5%B8%82%E6%A2%93%E5%AE%98%E5%8D%80%E4%B8%AD%E6%AD%A3%E4%BA%94%E8%A1%97/data=!4m2!3m1!1s0x346e0f4beb9c751f:0x5c75382ab0d25c9c?sa=X&ved=2ahUKEwiD467Aw-_6AhXNet4KHWvdDEUQ8gF6BAgOEAE"
-                            target="_black">•
+                            target="_black">
                             高雄市中正五路到底</a></li>
-                    <li class="connection-items"><a class="connection-text" href="tel:+886 886 886">• +886 886 886</a>
+                    <li class="connection-items"><a class="connection-text" href="tel:+886 886 886">+886 886 886</a>
                     </li>
-                    <li class="connection-items"><a class="connection-text" href="mailto:service@hexschool.com">•
-                            service@hexschool.com</a></li>
+                    <li class="connection-items"><a class="connection-text"
+                            href="mailto:service@hexschool.com">service@hexschool.com</a></li>
                 </ul>
         </section>
         <section class="community">

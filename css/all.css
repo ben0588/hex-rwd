@@ -84,6 +84,11 @@ img {
     outline:1px solid rgb(255, 0, 0);
 }                 */
 
+/* 
+    建議不要在 body 限制寬度，可以將以下定義為共用容器樣式，例如：.container，將需要限制寬度的地方加入此 class
+    max-width: 1024px;
+    margin: 0 auto;
+ */
 body {
     max-width: 1024px;
     margin: 0 auto;
@@ -341,6 +346,14 @@ body {
     color:#3D1101;
     line-height:1.1rem;
     font-size:1rem;
+}
+
+/* 同學 .footer 中的 .connection-list 可以以 list-style-type: disc; 設置實心圓形符號。 */
+.connection .connection-list{
+    color:#3D1101;
+    line-height:1.1rem;
+    font-size:1rem;
+    list-style-type: disc;
 }
 
 /* 社群連結 */
@@ -847,6 +860,13 @@ body {
     margin:20px 20px 0 0 ;
 }
 
+/* .cart-menu 選單可以加入 hover 效果 */
+.cart-aside .cart-menu-text:hover {
+    background-color: #3D1101;
+    color:white;
+}
+
+/* .menu-text 可設置 border-top:0; 避免上下兩 border 重合，顯得整體框線粗細不一。  */
 .cart-menu .cart-menu-text {
     display: block;
     text-decoration: none;
@@ -854,6 +874,7 @@ body {
     padding:10px 10px;
     border-bottom: 1px solid #3D1101;
     font-weight: bolder;
+    border-top:0;
 }
 .cart-menu li:nth-child(4) >a {
     background-color: #3D1101;
@@ -1245,7 +1266,7 @@ body {
     /* 製作底層樣板 ( 超出卡片用 ) */
     position:absolute;
     top:-2%;
-    right:-4%;
+    right:-3%;
     width: 150px;
     height: 150px;
     overflow: hidden;
@@ -1287,10 +1308,15 @@ body {
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     position: absolute;
-    bottom: -7px;
+    bottom: -5px;
     right: 39px;
 }
-
+@media (max-width:768px){
+    .cart-product-hot-content .cart-product-hot:after {
+        bottom: -7px;
+        right: 38px;
+    }
+}
 
 @media (max-width:414px){
     .cart-product .cart-product-like {
@@ -1302,21 +1328,14 @@ body {
         height: 50px;
     }
     .cart-product-hot-content .cart-product-hot:after {
-        bottom: -7.3px;
-        right: 49px;
-    }
-}
-@media (max-width:375px){ 
-    .cart-product-hot-content .cart-product-hot:after {
-        bottom: -7.1px;
-        right: 47px;
+        bottom: -7px;
+        right: 43px;
     }
 }
 
 @media (max-width:320px){ 
     .cart-product-hot-content .cart-product-hot:after {
-        bottom: -6.5px;
-        right: 44px;
+        right: 40px;
     }
 }
 /* cart-product 購物車卡片區塊 end */
@@ -1396,7 +1415,6 @@ body {
 .login-form-info  .login-forget-password:focus {
     color:#ff2402;
 }
-
 
 .login-form-info .login-register-btn {
     padding:7px 50px;
