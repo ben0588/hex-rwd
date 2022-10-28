@@ -1,0 +1,14 @@
+//  _mixin 用來自定義知識庫
+
+// 圖片取代文字技巧
+@mixin hide-text {
+    text-indent:110%;
+    overflow:hidden;
+    white-space:nowrap;
+}
+// 水平垂直置中方式
+@mixin flex-center {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

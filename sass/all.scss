@@ -1,0 +1,25 @@
+// abstracts (_variable變數、_functions函式、_mixin自訂知識庫)
+// 使用 @mixin 建立名稱後 在對應處區使用 @include 引用用即可。也可以帶入變數去使用 ($items,$items)
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// base 全域設定 (_reset清除瀏覽器格式、_typography全站設定)
+@import 'base/reset';
+@import 'base/typography';
+
+// layout 共同框架 ( _navigation導覽列、 _grid斷點、_header、_footer、_sidebar)
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/banner';
+@import 'layout/sidebar';
+@import 'layout/footer';
+
+// components 元件 / module 模組 (_buttons按鈕、_carousel輪播、_form表單、_table表格)
+@import 'components/buttons';
+
+// pages 各頁內容 (_index/_home首頁格式、_pages/index、_pages1、_pages2)
+@import 'pages/index';
+@import 'pages/cart';
+@import 'pages/login';
+@import 'pages/register';

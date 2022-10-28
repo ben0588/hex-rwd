@@ -1,0 +1,51 @@
+// _variable 用來存放變數
+
+// 標題顏色 [主題色]
+$title-color: #3d1101;
+// $title-color: #6c5ce7;
+
+// 內文文字顏色 [主題色]
+$text-color: #3d1101;
+// $text-color: #6c5ce7;
+// 燒腦。。。。未來使用 React 實現切換主題色QQ
+
+// 標題淺色
+$title-light: #efe9e7;
+
+// 內文文字淺色
+$text-light: #efe9e7;
+
+// banner 口號 標題顏色
+$banner-slogan-title-color: white;
+
+// banner 口號 副標顏色
+$banner-slogan-subtitle-color: white;
+
+// 淺色背景底
+$bg-light: #efe9e7;
+
+// 深色背景底
+$bg-dark: #3d1101;
+
+// 文字大小設定
+$font-m: 16px;
+$font-xxl: $font-m * 3.063; // 49px
+$font-xl: $font-m * 2; // 36px
+$font-xm: $font-m * 1.25; // 20px
+$font-l: $font-m * 1.5; // 24px
+$font-sm: $font-m * 0.875; // 14px
+
+// 文字行寬距
+$letter-spacing: 2px;
+
+// 標題文字行高
+$title-inline-height: 1.5rem;
+
+// 內文文字行高
+$text-inline-height: 1.2rem;
+
+// 標題字型
+$title-family: 'NotoSansCJKtc-Black';
+
+// 內文字型
+$text-family: 'NotoSansCJKtc-Black';

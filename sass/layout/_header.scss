@@ -1,0 +1,55 @@
+.header {
+    max-width: 1022px;
+    width: 100%;
+    padding:16px 42px;
+    background-color: rgb(0, 0, 0, .75);
+    position:fixed;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+    @include media-md{
+        padding:16px 10px;
+    }
+    
+    .logo {
+        background: url('../images/logo_w\(null\).svg') center no-repeat;
+        object-fit: cover;
+        display: block;
+        width: 120px;
+        padding:4px 0;
+        // text-indent:101%;
+        // overflow:hidden;
+        // white-space:nowrap;
+        @include hide-text;
+    }
+    
+    /* 製作 menu 切換按鈕樣式 */
+    .toggle-menu  {
+    background-image: url('../images/134216_menu_lines_hamburger_icon.svg');
+    background-size: cover;
+    background-position: center center;
+    width: 40px;
+    height: 40px;
+    text-indent:500%;
+    overflow:hidden;
+    white-space:nowrap;
+    transition: all .3s ease-in-out;
+    display: none;
+    }
+
+    @include media-md-sm {
+        .toggle-menu {
+            display: block;
+            padding:15px;
+        }
+    }
+
+    .show-menu .menu {
+        max-height: 500px;
+    }
+
+    .show-menu .toggle-menu {
+        background-image: url('../images/9110796_x_icon.svg');
+    } 
+}; 

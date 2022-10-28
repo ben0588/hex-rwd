@@ -1,0 +1,59 @@
+
+
+.navbar {
+    .menu {
+        display:flex;
+    }
+    .menu-text {
+        color:rgb(131, 128, 128);
+        padding:18px;
+    }
+    .menu-text:hover {
+        color:white;
+        transition: color .3s ease;
+    }
+    .menu-text:focus {
+        color:white;
+        transition: color .3s ease;
+    }
+    @include media-md-sm {
+        width: 100%;
+
+        // 製作下拉式導覽列
+        .menu {
+            background-color: rgba(0, 0, 0);
+            flex-wrap:wrap;
+            max-height: 0;
+            position: absolute;
+            top:100%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            transition:max-height .7s ease;
+            overflow: hidden;
+        }
+        .menu-items {
+            width: 100%;
+        }
+
+        .menu-text {
+            display: block;
+            padding:20px 10px;
+            font-size: 20px;
+            border: 1px solid #1f1f1f;
+        }
+    }
+}
+
+// 顯示選單class
+.show-menu  {
+    .header {
+        .menu {
+            max-height: 500px;
+        }
+    
+        .toggle-menu {
+        background-image: url('../images/9110796_x_icon.svg');
+        }
+    }
+}

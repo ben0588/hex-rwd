@@ -8,7 +8,7 @@
     <!-- 新增 icon -->
     <link rel="shortcut icon" href="./images/1664840138.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./images/1664840138.ico" />
-    <!-- 載入 reset + 各設定 -->
+    <!-- 載入 all.css -->
     <link rel="stylesheet" href="./css/all.css">
     <!-- 引用 google 字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,104 +37,107 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1><a aria-current="page" target='_self' href="./index.html" class="logo">六角西餐廳</a></h1>
-        <nav class="navbar">
-            <ul class="menu">
-                <li class="menu-items"><a aria-current="page" target='_self' href="./cart.html"
-                        class="menu-text">購物車</a>
-                </li>
-                <li class="menu-items"><a aria-current="page" target='_self' href="./login.html"
-                        class="menu-text">登入</a></li>
-                <li class="menu-items"><a aria-current="page" target='_self' href="./register.html"
-                        class="menu-text">註冊</a></li>
-            </ul>
-        </nav>
-        <a href="#" class="toggle-menu ">選單</a>
-    </header>
-    <section class="banner">
-        <!-- 使用background:url('')連接不出來，所以使用 img tag 製作 -->
-        <img src="./images/header_desktop.png" class="banner-desktop" alt="banner-desktop">
-        <img src="./images/header_mobile.png" class="banner-mobile" alt="banner-mobile">
-        <article class="slogan">
-            <hgroup>
-                <h2 class="main-title">咬一口就無法忘懷的漢堡</h2>
-                <h2 class="main-title_mobile">咬一口<br />就無法忘懷的漢堡</h2>
-                <h3 class="subtopic-title">七夕絕對無法錯過的好滋味<br /><img src="./images/8723191_dining_food_icon.svg"
-                        alt="dining-icon"> 六角大漢堡 <img src="./images/8723191_dining_food_icon.svg" alt="dining-icon">
-                </h3>
-            </hgroup>
-        </article>
-    </section>
+    <div class="container">
+        <header class="header">
+            <h1><a aria-current="page" target='_self' href="./index.html" class="logo">六角西餐廳</a></h1>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li class="menu-items"><a aria-current="page" target='_self' href="./cart.html"
+                            class="menu-text">購物車</a>
+                    </li>
+                    <li class="menu-items"><a aria-current="page" target='_self' href="./login.html"
+                            class="menu-text">登入</a></li>
+                    <li class="menu-items"><a aria-current="page" target='_self' href="./register.html"
+                            class="menu-text">註冊</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="toggle-menu">選單</a>
+        </header>
+        <section class="banner">
+            <article class="slogan">
+                <hgroup>
+                    <h2 class="main-title">咬一口就無法忘懷的漢堡</h2>
+                    <h2 class="main-title_mobile">咬一口<br />就無法忘懷的漢堡</h2>
+                    <h3 class="main-subtitle">七夕絕對無法錯過的好滋味<br /><img src="./images/8723191_dining_food_icon.svg"
+                            alt="dining-icon"> 六角大漢堡 <img src="./images/8723191_dining_food_icon.svg" alt="dining-icon">
+                    </h3>
+                </hgroup>
+            </article>
+        </section>
 
-    <main class="main-login-pages">
-        <h2 class="login-pages-title">
-            六角西餐廳
-        </h2>
-        <h3 class="login-pages-subtitle">
-            享受美食好味道
-        </h3>
+        <main class="main-login-pages">
+            <h2 class="login-pages-title">
+                六角西餐廳
+            </h2>
+            <h3 class="login-pages-subtitle">
+                享受美食好味道
+            </h3>
 
-        <!--
+            <!--
             註冊、登入頁面
                 密碼的 input type 可以設定 password
                 「已經有帳號了？」可以連結到登入頁面
          -->
 
-        <form action="#" class="login-form-info">
-            <fieldset>
-                <legend class="login-form-title">LOGIN</legend>
-                <label for="login-form-email" class="login-form-label">Email Address*
-                    <input type="email" class="login-form-email" id="login-form-email">
-                    <span><img src="./images/3586360_email_envelope_mail_send_icon.svg" alt="login-form-email"></span>
-                </label>
-                <label for="login-form-password" class="login-form-label">Password*
-                    <input type="password" class="login-form-password" id="login-form-password">
-                    <span><img src="./images/5402395_encryption_lock_password_security_key_icon.svg"
-                            alt="login-form-password"></span>
-                </label>
-                <a class="login-forget-password" href="#">忘記密碼？</a>
+            <form action="#" class="login-form-info">
+                <fieldset>
+                    <legend class="login-form-title">LOGIN</legend>
+                    <label for="login-form-email" class="login-form-label">Email Address*
+                        <input type="email" class="login-form-email" id="login-form-email">
+                        <span><img src="./images/3586360_email_envelope_mail_send_icon.svg"
+                                alt="login-form-email"></span>
+                    </label>
+                    <label for="login-form-password" class="login-form-label">Password*
+                        <input type="password" class="login-form-password" id="login-form-password">
+                        <span><img src="./images/5402395_encryption_lock_password_security_key_icon.svg"
+                                alt="login-form-password"></span>
+                    </label>
+                    <a class="login-forget-password" href="#">忘記密碼？</a>
 
-                <input type="submit" class="login-register-btn" value="註冊">
-                <input type="submit" class="login-login-btn" value="登入">
-            </fieldset>
-        </form>
+                    <input type="submit" class="register-btn" value="註冊">
+                    <input type="submit" class="login-btn" value="登入">
+                </fieldset>
+            </form>
 
-    </main>
+        </main>
 
-    <footer class="footer">
-        <section class="about">
-            <h4 class="about-title">關於 六角西餐廳</h3>
-                <p class="about-text">Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque volutpat
-                    augue enim,
-                    pulvinar
-                    lobortis nibh lacinia at. </p>
-        </section>
-        <section class="connection">
-            <h4 class="connection-title">聯絡方式</h3>
-                <ul class="connection-list">
-                    <li class="connection-items"><a class="connection-text"
-                            href="https://www.google.com/maps/place/826%E9%AB%98%E9%9B%84%E5%B8%82%E6%A2%93%E5%AE%98%E5%8D%80%E4%B8%AD%E6%AD%A3%E4%BA%94%E8%A1%97/data=!4m2!3m1!1s0x346e0f4beb9c751f:0x5c75382ab0d25c9c?sa=X&ved=2ahUKEwiD467Aw-_6AhXNet4KHWvdDEUQ8gF6BAgOEAE"
-                            target="_black">•
-                            高雄市中正五路到底</a></li>
-                    <li class="connection-items"><a class="connection-text" href="tel:+886 886 886">• +886 886 886</a>
+        <footer class="footer">
+            <section class="about">
+                <h4 class="about-title">關於 六角西餐廳</h3>
+                    <p class="about-text">Curabitur lobortis id lorem id bibndum. Ut id consectetur magna. Quisque
+                        volutpat
+                        augue enim,
+                        pulvinar
+                        lobortis nibh lacinia at. </p>
+            </section>
+            <section class="connection">
+                <h4 class="connection-title">聯絡方式</h3>
+                    <ul class="connection-list">
+                        <li class="connection-items"><a class="connection-text"
+                                href="https://www.google.com/maps/place/826%E9%AB%98%E9%9B%84%E5%B8%82%E6%A2%93%E5%AE%98%E5%8D%80%E4%B8%AD%E6%AD%A3%E4%BA%94%E8%A1%97/data=!4m2!3m1!1s0x346e0f4beb9c751f:0x5c75382ab0d25c9c?sa=X&ved=2ahUKEwiD467Aw-_6AhXNet4KHWvdDEUQ8gF6BAgOEAE"
+                                target="_black">
+                                高雄市中正五路到底</a></li>
+                        <li class="connection-items"><a class="connection-text" href="tel:+886 886 886">+886 886 886</a>
+                        </li>
+                        <li class="connection-items"><a class="connection-text"
+                                href="mailto:service@hexschool.com">service@hexschool.com</a></li>
+                    </ul>
+            </section>
+            <section class="community">
+                <h2 class="community-title">六角西餐廳</h2>
+                <ul class="community-icon">
+                    <li><a href="https://www.hexschool.com/" target="_black" class="community-icon-google">google+</a>
                     </li>
-                    <li class="connection-items"><a class="connection-text" href="mailto:service@hexschool.com">•
-                            service@hexschool.com</a></li>
+                    <li><a href="https://twitter.com/hexschool1" target="_black"
+                            class="community-icon-twitter">twitter</a>
+                    </li>
+                    <li><a href="https://www.facebook.com/hexschool/" target="_black"
+                            class="community-icon-facebook">facebook</a></li>
                 </ul>
-        </section>
-        <section class="community">
-            <h2 class="community-title">六角西餐廳</h2>
-            <ul class="community-icon">
-                <li><a href="https://www.hexschool.com/" target="_black" class="community-icon-google">google+</a></li>
-                <li><a href="https://twitter.com/hexschool1" target="_black" class="community-icon-twitter">twitter</a>
-                </li>
-                <li><a href="https://www.facebook.com/hexschool/" target="_black"
-                        class="community-icon-facebook">facebook</a></li>
-            </ul>
 
-        </section>
-    </footer>
+            </section>
+        </footer>
+    </div>
     <!-- 載入 JavaScript 設定，html5預設type="text/javascript" -->
     <script src="./js/all.js"></script>
 </body>

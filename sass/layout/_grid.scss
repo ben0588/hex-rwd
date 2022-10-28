@@ -1,0 +1,48 @@
+// grid 設定斷點，這邊的 @content，代表的是，如果有設定其他東西，將會帶入裡面進行編譯
+
+// media-md    |中   |768px iPad
+// media-md-sm |中小 |767px iPad以下  
+// media-sm    |小   |568px i5橫式
+// media-sm-sm |更小 |414px i6+ ~ i11
+// media-xs    |最小 |375px i7  ~ i11
+// media-xs-sm |極小 |320px i5
+
+@mixin media-md {
+    @media (max-width:768px){
+        @content
+    }
+};
+
+@mixin media-md-sm {
+    @media (max-width:767px){
+        @content
+    }
+};
+
+@mixin media-sm {
+    @media (max-width:568px){
+        @content
+    }
+};
+
+@mixin media-sm-sm {
+    @media (max-width:414px){
+        @content
+    }
+};
+
+@mixin media-xs {
+    @media (max-width:375px){
+        @content
+    }
+};
+
+@mixin media-xs-sm {
+    @media (max-width:320px){
+        @content
+    }
+};
+
+
+
+

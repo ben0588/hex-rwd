@@ -1,0 +1,129 @@
+// button 製作有關按鈕樣式
+
+// 送出 & 取消
+.submit-btn,
+.cancel-btn {
+    float: right;
+    padding: 1.5% 5%;
+    margin: 1%;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn {
+    background-color: #f56c23;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &:hover {
+        background-color: #0984e3;
+    }
+
+    &:focus {
+        background-color: rgb(247, 142, 142);
+    }
+}
+
+.cancel-btn {
+    background-color: rgb(0, 0, 0, 0.35);
+    position: absolute;
+    bottom: 0;
+    right: 18%;
+
+    &:hover {
+        background-color: black;
+    }
+
+    &:focus {
+        background-color: rgb(194, 84, 84);
+    }
+}
+
+// 註冊 & 登入 按鈕
+.register-btn,
+.login-btn {
+    float: right;
+    padding: 1.5% 5%;
+    margin: 1%;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-btn {
+    padding: 7px 50px;
+    float: left;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-style: none;
+    color: white;
+    font-size: 0.88rem;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: black;
+    }
+
+    &:focus {
+        background-color: #0984e3;
+    }
+}
+.login-btn {
+    padding: 7px 50px;
+    float: right;
+    border-radius: 3px;
+    background-color: #f56c23;
+    border-style: none;
+    color: white;
+    font-size: 0.88rem;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #d63031;
+    }
+
+    &:focus {
+        background-color: #fdcb6e;
+    }
+}
+
+// 加入購物車按鈕
+.cart-product-addCart {
+    display: block;
+    border: 2px solid #ff5e45;
+    color: #ff5e45;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bolder;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+
+    &:hover {
+        background-color: #ff5e45;
+        color: white;
+
+        img {
+            filter: drop-shadow(50px 0px 0px #ffffff);
+        }
+    }
+
+    // 利用filter: drop-shadow產生陰影，把原圖推出去然後在上層隱藏，就可以實現svg更換
+    img {
+        filter: drop-shadow(50px 0px 0px #ff5e45);
+        position: absolute;
+        left: -8%;
+    }
+}

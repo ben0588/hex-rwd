@@ -1,0 +1,134 @@
+.footer {
+    background-color:$bg-light; 
+    padding:50px 40px;
+    display: flex;
+
+    /* 關於我 */
+    .about {
+        width: 40%;
+        .about-title{
+            color:$title-color;
+            font-size:$font-xm;
+            font-weight:bolder;
+            margin:0 0 16px;
+        }
+        .about-text{
+            color:$text-color;
+            font-size:$font-m;
+        }
+    }
+    /* 聯絡方式 */
+    .connection {
+        width: 40%;
+        .connection-title {
+            color:$title-color;
+            font-size:$font-xm;
+            font-weight:bolder;
+            margin:0 0 16px;
+        
+        }
+        .connection-text{
+            color:$text-color;
+            font-size:$font-m;
+            line-height:1.1rem;
+        }
+        /* 同學 .footer 中的 .connection-list 可以以 list-style-type: disc; 設置實心圓形符號。 */
+        .connection-list{
+            color:$text-color;
+            font-size:$font-m;
+            line-height:1.1rem;
+            list-style-type: disc;
+            padding:0 0 0 20px;
+        }
+    }
+
+    /* 社群連結 */
+    .community {
+        width: 40%;
+        text-align: right;
+    }
+
+    .community-title {
+        font-family: 'Noto Sans TC', sans-serif;
+        color:$title-color;
+        font-size:$font-xxl;
+        font-weight:bolder;
+        margin:0 0 22px;
+    }
+
+    .community-icon {
+        display:flex;
+        justify-content:right;
+    }
+    .community-icon-google {
+        background-image: url('../images/322690_google_google\ plus_google+_gplus_plus_icon.svg');
+        background-size: cover;
+        background-position: center center;
+        object-fit: cover;
+        display: block;
+        width:30px;
+        height:30px;
+        // text-indent:101%;
+        // overflow:hidden;
+        // white-space:nowrap;
+        @include hide-text;
+
+    }
+    .community-icon-twitter {
+        background-image: url('../images/5296516_tweet_twitter_twitter\ logo_icon.svg');
+        background-size: cover;
+        background-position: center center;
+        object-fit: cover;
+        display: block;
+        width:30px;
+        height:30px;
+        // text-indent:101%;
+        // overflow:hidden;
+        // white-space:nowrap;
+        @include hide-text;
+        margin:0 11px;
+    }
+
+    .community-icon-facebook {
+        background-image: url('../images/1298738_facebook_brand_fb_logo_social\ media_icon.svg');
+        background-size: cover;
+        background-position: center center;
+        object-fit: cover;
+        display: block;
+        width:30px;
+        height:30px;
+        // text-indent:101%;
+        // overflow:hidden;
+        // white-space:nowrap;
+        @include hide-text;
+        border-radius: 5px;
+    }
+    @include media-md {
+        padding:50px 20px;
+        .connection {
+            margin:0 0 0 20px;
+        }
+        .community-title  {
+            font-size:$font-xl;
+        }
+    }
+    @include media-md-sm {
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-around;
+        .about,
+        .connection,
+        .community 
+        {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+        .connection-text {
+            font-size: $font-m;
+        }
+        .community-title {
+            font-size: $font-xxl;
+        }
+    }
+
+}

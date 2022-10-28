@@ -1,0 +1,91 @@
+.banner {
+    // 注意。因為此.scss檔案編譯完會在 css 檔案中所以跳連跳兩層
+    background-image: url("~../../../images/header_desktop.png");
+    background-position: center center;
+    object-fit:cover;
+    max-width: 100%;
+    width: 100%;
+    height: 420px;
+    position: relative;
+    
+
+    .slogan {
+        max-width: 100%;
+        height:auto;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        padding:20px 22px;
+        background-color:rgba(0,0,0,0.35);
+
+        .main-title {
+            color:$banner-slogan-title-color;
+            font-size:$font-xl;
+            font-weight:200;
+            text-align: center;        
+        }
+    
+        .main-title_mobile {
+            color:$banner-slogan-title-color;
+            font-size:$font-xl;
+            font-weight:200;
+            text-align: center;        
+            display: none;
+        }
+    
+        .main-subtitle {
+            color:$banner-slogan-subtitle-color;
+            font-size:$font-m;
+            text-align:center;
+            padding:18px 0 0;
+            line-height: 1.5rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+    @include media-md {
+        .banner-desktop {
+            background-position: right center;
+        }
+        .slogan {
+            width: 60%;
+            padding:25px 0 40px;
+        }
+    }
+    @include media-md-sm {
+
+        // 手機板換圖片
+        background-image: url('~../../../images/header_mobile.png');
+        
+        .slogan {
+            width: 80%;
+        }
+    }
+    @include media-sm {
+        .slogan {
+            width: 90%;
+        }
+     
+        /* 切換顯示 banner 模式 */
+        .banner-desktop{
+            display: none;
+        }
+    
+        .banner-mobile{
+            height: 420px;
+            display: block;
+        }
+    
+        /* 標題切換 */
+        .slogan .main-title {
+            display: none;
+        }
+    
+        .slogan .main-title_mobile {
+            display: block;
+            font-size: $font-xl;
+        }
+    }
+
+} 

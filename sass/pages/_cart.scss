@@ -1,0 +1,447 @@
+.cart-main {
+    background-color:$bg-light; 
+    display:flex;
+    padding:3% 3% 0;
+    flex-wrap: wrap;
+
+    /* cart-aside 購物車側邊欄位 start */
+    .cart-aside {
+        width: 30%;
+
+        .cart-aside-title{
+            color: $title-color;
+            font-size:$font-xm;
+            display:flex;
+            align-items: center;
+            font-weight: bolder;
+        }
+
+        .cart-aside-icon {
+            margin: 0 10px 0 0;
+        }
+
+        .cart-menu {
+            margin:20px 20px 0 0 ;
+
+            // .menu-text 可設置 border-top:0; 避免上下兩 border 重合，顯得整體框線粗細不一。
+            .cart-menu-text {
+                display: block;
+                text-decoration: none;
+                color: $title-color;
+                padding:10px 10px;
+                border-bottom: 1px solid $bg-dark;
+                font-weight: bolder;
+                border-top:0;
+
+                // cart-menu 選單可以加入 hover 效果
+                &:hover {
+                    background-color: $bg-dark;
+                    color:$text-light;
+                }
+            }
+
+            li:nth-child(4) >a {
+                background-color: $bg-dark;
+                color:$text-light;
+            }
+        }
+
+        @include media-md-sm {
+            width: 100%;
+
+            .cart-menu {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .cart-aside-title{
+                padding:20px 0 0;
+             }
+
+            .cart-menu-items{
+                width: 50%;
+            }
+
+            .cart-content{
+                width: 100%;
+            }
+        }
+
+        @include media-xs {
+            .cart-menu-items{
+                width: 100%;
+            }
+        }
+
+    }
+    /* cart-aside 購物車側邊欄位 end */
+
+    .cart-content{
+        width: 70%;
+
+        // 讓 搜尋框 變滿版
+        @include media-md-sm {
+            width: 100%;
+        }
+
+        .cart-navbar {
+            display:flex;
+            justify-content:space-between;
+            padding:10px 0 ;
+            max-width: 100%;
+            flex-wrap: wrap;
+
+            .cart-navbar-menu {
+                display:flex;
+                align-items: center;
+
+                .navbar-pay-text{
+                    color: $text-color;
+                    padding: 10px;
+                    position: relative;
+
+                    &:hover{
+                        text-shadow:1px 1px 5px #818080;
+                    }
+
+                    // 購物車右邊 | 樣式
+                    &::after{
+                        content:'';
+                        position:absolute;
+                        background-color: #1f1f1f;
+                        width: 1px;
+                        height: 15px;
+                        top:37%;
+                        right: 0;
+                    }
+                }
+
+                .navbar-check-icon{
+                    background:url('../images/326700_cart_shopping_icon.svg') center no-repeat;
+                    display:block;
+                    text-indent: 150%;
+                    overflow:hidden;
+                    white-space:nowrap;
+                    width: 27px;
+                    height: 27px;
+                    margin:0 10px;
+                }
+
+                // 購物車右上角(1)數字樣式
+                .cart-navbar-check{
+                    position: relative;
+
+                    .navbar-check-sum {
+                        background-color: #FF5E45 ;
+                        border-radius: 50%;
+                        color: #ffffff;
+                        position:absolute;
+                        width: 20px;
+                        height: 20px;
+                        top:-20%;
+                        right: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                // 樣式移動
+                @include media-md-sm {
+                    padding:15px;
+                    width: 100%;
+                    justify-content: end;
+                    align-items: center;
+                }
+                
+            }
+    
+
+            // 製作搜尋欄位
+            .cart-search {
+                width: 70%;
+                position: relative;
+
+                input{
+                    width: 100%;
+                    padding:1.5%;
+                    border-color: #1f1f1f;
+                }
+
+                // 在前面新增小方塊底色圖
+                &:before{
+                    content:'';
+                    position:absolute;
+                    background-color: #3D1101;
+                    width:8%;
+                    height:97%;
+                    top:0;
+                    right: 0;
+                }
+
+                // 在後面新增 放大鏡 icon 圖案
+                &::after{
+                    content:'';
+                    position:absolute;
+                    width:8%;
+                    height:99%;
+                    top:0;
+                    right: 0;
+                    background:url('../images/352091_search_icon.svg') no-repeat center;
+                    cursor:pointer;
+                }
+
+                @include media-md-sm {
+                    width: 100%;
+                    &::before{
+                        width:10%;
+                        height:97%;
+                    }
+
+                    &::after{
+                        width:10%;
+                        height:99%;
+                    }
+                }
+
+                @include media-sm-sm {
+                    width: 100%;
+
+                    input{
+                        padding:2.5%;
+                    }
+
+                    &::before{
+                        width:15%;
+                    }
+                
+                    &::after{
+                        width:15%;
+                
+                    }
+                } 
+                @include media-xs-sm {
+                    width: 100%;
+
+                    input{
+                        padding:3%;
+                    }
+
+                    &::before{
+                        width:20%;
+                    }
+                
+                    &::after{
+                        width:20%;
+                
+                    }
+                }   
+            }
+        }
+    }
+    /* cart-navbar 購物車導覽列內容 end */
+
+    /* cart-product 購物車卡片區塊 start */
+    .cart-product {
+        display: flex;
+        flex-wrap:wrap;
+
+        // 商品卡片設定
+        .cart-product-items {
+            width:31%;
+            margin:1%;
+            box-shadow:3px 3px 4px rgb(0, 0, 0, .16);
+            position: relative;
+
+            @include media-md {
+                width:45%;
+                margin:3% auto;
+            }
+
+            @include media-md-sm {
+                width:100%;
+
+                .cart-product-img {
+                    width: 100%;
+                }
+            }
+
+            .cart-product-img {
+                display:block;
+                height: 120px;
+                object-fit:cover;
+            }
+    
+            .cart-product-title {
+                color:$title-color;
+                font-size:$font-xm;
+                font-weight: bolder;
+                text-align:center;
+                margin:20px 0 0 ;
+            }
+    
+            .cart-product-titleEn {
+                color:$title-color;
+                text-align:center;
+                font-size:0.75rem;
+                position:relative;
+                margin:0 0 31px;
+    
+                // 文字下方的 ___ 底線樣式
+                &::after {
+                    content:'';
+                    width: 50%;
+                    height: 1px;
+                    background: #3D1101;
+                    position:absolute;
+                    top:170%;
+                    left: 25%;
+                }
+            }
+    
+            .cart-product-price {
+                font-family: 'Roboto-Light';
+                color:$text-color;
+                display:block;
+                text-align:center;
+                font-size:$font-xm;
+                font-weight:bolder;
+                font-style: italic;
+                margin:0 0 15px;
+            }
+    
+            // 卡片左上角小愛心
+            .cart-product-like {
+                display: block;
+                position: absolute;
+                top:0;
+                width: 35px;
+                height: 60px;
+                z-index: 50;
+    
+                &::after, 
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top:0;
+                    margin:5px;
+                    width: 50%;
+                    height: 50%;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0 0 5px white;
+                    border-radius: 50px 50px 0 0;
+                    cursor:pointer;
+                    transition: all .3s ease-in-out;
+                }
+    
+                &::after {
+                    left: 0;
+                    transform: rotate(45deg);
+                    transform-origin: 100% 100%;
+                }
+    
+                &::before {
+                    left: 50%;
+                    transform: rotate(-45deg);
+                    transform-origin: 0 100%;
+                }
+    
+                &:hover {
+                    &::after,
+                    &::before {
+                        background-color: #ff0000;
+                        box-shadow: 0 0 5px red;
+                    }
+                }
+                &:active {
+                    &::after,
+                    &::before {
+                        background-color: rgb(255, 0, 212);
+                        box-shadow: 0 0 5px rgb(255, 0, 212);
+                    }
+                }
+    
+            }
+            // 卡片右上角-熱銷美食緞帶
+            .cart-product-hot-content{
+                //  製作底層樣板 ( 超出卡片用 )
+                position:absolute;
+                top:-2%;
+                right:-3%;
+                width: 150px;
+                height: 150px;
+                overflow: hidden;
+
+                // 製作卡片緞帶，最多只能超出樣板，把上面背景圖案打開查看差異
+                .cart-product-hot{
+                    /* 底層設定 */
+                    position:absolute;
+                    top:15%;
+                    right:-45%;
+                    transform: rotate(45deg);
+                    width: 200px;
+                    padding:5px;
+                    background-color: #00CC99 ;
+                
+                    /* 文字設定 */
+                     color: #ffffff;
+                     font-size:1rem;
+                     text-shadow:0 0 5px rgb(0, 0, 0);
+                     text-align: center;
+
+                    // 製作兩邊 緞帶摺疊處 
+                    &::before {
+                        content: "";
+                        border-top: 7px solid #038f73;
+                        border-left: 7px solid transparent;
+                        border-right: 7px solid transparent;
+                        position: absolute;
+                        bottom: -7px;
+                        left: 32px;
+                    }
+                    &::after {
+                        content: "";
+                        border-top: 7px solid #038f73;
+                        border-left: 7px solid transparent;
+                        border-right: 7px solid transparent;
+                        position: absolute;
+                        bottom: -5px;
+                        right: 39px;
+                    }
+
+                    @include media-md {
+                        &::after {
+                            bottom: -7px;
+                            right: 38px;
+                        }
+                    }
+                    @include media-md-sm {
+                        &::after {
+                            border-top: 9px solid #038f73;
+                            border-left: 9px solid transparent;
+                            border-right: 9px solid transparent;
+                            bottom: -9px;
+                            right: 45px;
+                        }
+                    }
+                    @include media-sm-sm {
+                        &::after {
+                            border-top: 7px solid #038f73;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            bottom: -7px;
+                            right: 43px;
+                        }
+                    }
+                    @include media-xs-sm {
+                        &::after {
+                            right: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* cart-product 購物車卡片區塊 end */
+}
+/* cart 購物車頁面 end */

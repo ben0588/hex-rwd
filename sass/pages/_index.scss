@@ -1,0 +1,312 @@
+.main {
+    height: auto;
+}
+/* advantage 優勢區塊 start  */
+.advantage {
+    background-color: $bg-light;
+    padding: 0 0 25px;
+
+    .advantage-title {
+        font-size: $font-xm;
+        color: $title-color;
+        text-align: center;
+        font-weight: bolder;
+        line-height: 32px;
+        padding: 50px 0 0;
+    }
+    .advantage-subtitle {
+        display: block;
+        position: relative;
+    }
+
+    // 製作標題左右兩側 --- 線條
+    .advantage-subtitle::after,
+    .advantage-subtitle::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        background-color: #979797;
+        width: 15%;
+        height: 1px;
+    }
+    .advantage-subtitle::after {
+        left: 20%;
+    }
+    .advantage-subtitle::before {
+        right: 20%;
+    }
+    @include media-md-sm {
+        .advantage-subtitle::after,
+        .advantage-subtitle::before {
+            width: 0;
+        }
+    }
+
+    .advantage-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .advantage-items {
+        padding: 20px;
+        width: 33.333%;
+    }
+    @include media-md-sm {
+        .advantage-items {
+            width: 100%;
+        }
+    }
+
+    .advantage-items-img {
+        display: block;
+        /* clip-path: circle(50%); */
+        border-radius: 50%;
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0 auto;
+    }
+    .advantage-items-title {
+        color: $title-color;
+        font-size: $font-l;
+        text-align: center;
+        font-weight: bolder;
+        padding: 20px 0 10px;
+    }
+    .advantage-items-text {
+        color: $text-color;
+        font-size: $font-m;
+    }
+}
+/* advantage 優勢區塊 end  */
+
+/* chef 主廚介紹區塊 start  */
+.chef {
+    background-color: $bg-dark;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 4%;
+    flex-wrap: wrap;
+
+    .chef-img {
+        display: block;
+        max-width: 470px;
+        max-height: 460px;
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .chef-container {
+        width: 50%;
+        padding: 6% 3%;
+        margin: auto;
+    }
+
+    .chef-title {
+        color: $title-light;
+        font-size: $font-xm;
+        line-height: $title-inline-height;
+    }
+
+    .chef-subtitle {
+        color: $title-light;
+        font-size: $font-m;
+        display: block;
+        margin: 0 0 16px;
+    }
+
+    .chef-text {
+        color: $text-light;
+        font-size: $font-m;
+        line-height: $text-inline-height;
+    }
+
+    @include media-md {
+        padding: 0 1%;
+    }
+
+    @include media-md-sm {
+        padding: 0;
+
+        .chef-img {
+            width: 100%;
+        }
+        .chef-container {
+            width: 100%;
+        }
+    }
+}
+/* chef 主廚介紹區塊 end  */
+
+/* comment 評論分享區塊 start */
+.comment {
+    background-color: $bg-light;
+
+    .comment-title {
+        color: $title-color;
+        font-size: $font-xm;
+        font-weight: bolder;
+        text-align: center;
+        padding: 5% 0;
+    }
+
+    .comment-container {
+        display: flex;
+
+        .comment-items {
+            padding: 2%;
+            width: 33%;
+            display: flex;
+        }
+
+        @include media-md-sm {
+            flex-direction: column;
+
+            .comment-title {
+                padding: 10% 0;
+            }
+
+            .comment-items {
+                width: 100%;
+            }
+        }
+
+        .comment-img {
+            display: block;
+            max-width: 67px;
+            max-height: 67px;
+            border-radius: 50%;
+            margin: 0 2% 0 0;
+        }
+
+        .comment-items-content {
+            margin: 0 auto;
+            padding: 8% 0;
+        }
+
+        .comment-items-title {
+            font-size: $font-xm;
+            color: $title-color;
+            font-weight: bolder;
+            padding: 0 0 10%;
+        }
+
+        .comment-items-text {
+            font-size: $font-m;
+            color: $text-color;
+            line-height: $text-inline-height;
+        }
+
+        .comment-items-name {
+            font-size: $font-m;
+            color: $text-color;
+            float: right;
+            padding: 8% 0 10%;
+        }
+    }
+}
+/* comment 評論分享區塊 end */
+
+/* booking 訂位表單區塊 start */
+.booking {
+    background-color: rgb(250, 250, 250, 0.75);
+
+    .booking-title {
+        font-size: $font-l;
+        color: $title-color;
+        text-align: center;
+        font-weight: bolder;
+        line-height: $title-inline-height;
+        padding: 5% 0 3.8%;
+    }
+
+    .booking-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 2% 5%;
+
+        // 地圖區塊
+        .booking-map {
+            height: 360px;
+            border: 1px solid #dadee0;
+            width: 48%;
+        }
+
+        // form填寫區塊
+        .booking-form {
+            width: 48%;
+            position: relative;
+
+            label {
+                color: $text-color;
+                font-size: $font-sm;
+                display: block;
+                padding: 1% 0;
+            }
+
+            span {
+                color: $text-color;
+                font-size: $font-sm;
+            }
+
+            .booking-form-name,
+            .booking-form-tel,
+            .booking-form-mail,
+            .booking-form-number {
+                margin: 0 0 3%;
+                width: 100%;
+                padding: 2%;
+                border: 1px solid #ececec;
+            }
+            .booking-form-name:focus,
+            .booking-form-tel:focus,
+            .booking-form-mail:focus,
+            .booking-form-number:focus {
+                outline: 2px solid #ff2525;
+            }
+
+            .booking-form-vegetables {
+                margin: 1% 5% 0 0;
+            }
+        }
+        @include media-md {
+            .submit-btn {
+                padding: 2% 8%;
+            }
+            .cancel-btn {
+                padding: 2% 8%;
+                right: 27%;
+            }
+        }
+
+        @include media-md-sm {
+            flex-direction: column;
+
+            .booking-map {
+                width: 100%;
+            }
+
+            .booking-form {
+                width: 100%;
+                padding: 10% 0 15%;
+            }
+
+            .cancel-btn {
+                padding: 2% 8%;
+                right: 23%;
+            }
+        }
+
+        @include media-sm {
+            .cancel-btn {
+                right: 25%;
+            }
+        }
+        @include media-xs-sm {
+            .cancel-btn {
+                right: 27%;
+            }
+        }
+    }
+}
+/* booking 訂位表單區塊 end */

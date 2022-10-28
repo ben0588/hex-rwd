@@ -1,0 +1,158 @@
+.main-register-pages {
+    background-color: $bg-light;
+    padding: 50px 0 20px;
+
+    .register-pages-title {
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: $font-xxl;
+        color: $title-color;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .register-pages-subtitle {
+        text-align: center;
+        font-size: $font-xm;
+        font-weight: bolder;
+        color: $title-color;
+        padding: 10px 0 35px;
+    }
+
+    // 視窗容器樣式
+    .register-form-container {
+        margin: 0 auto;
+        max-width: 620px;
+        /* height: 316px; */
+        height: auto;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+        border-top: 4px solid #ff5e45;
+        padding: 12px;
+
+        .register-form-title {
+            font-family: 'Noto Sans TC', sans-serif;
+            color: $title-color;
+            font-size: $font-xm;
+            text-align: center;
+            padding: 0 0 10px;
+        }
+
+        fieldset {
+            display: flex;
+        }
+        // 共分成兩欄、各50%
+        .register-form-terms {
+            width: 50%;
+        }
+        .register-form-info {
+            width: 50%;
+        }
+
+        @include media-sm-sm {
+            fieldset {
+                flex-direction: column;
+            }
+            .register-form-terms {
+                width: 100%;
+            }
+            .register-form-info {
+                width: 100%;
+            }
+        }
+
+        .register-form-terms {
+            padding: 0 0 20px;
+
+            .register-form-terms-title {
+                font-size: $font-xm;
+                color: $title-color;
+                font-weight: bold;
+            }
+            .register-form-terms-text {
+                font-size: $font-m;
+                color: $text-color;
+            }
+        }
+
+        // form 設定
+        .register-form-info {
+            .register-form-label {
+                display: block;
+                color: $title-color;
+                font-size: $font-m;
+                padding: 10px 0 3px;
+                position: relative;
+
+                // input 前面得小icon圖標
+                span:nth-last-of-type(1) {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: 53%;
+                    left: 3%;
+                }
+            }
+            // 另一種在input 前新增 icon 圖標方式
+            .register-form-label-check {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: #eb9474;
+                    width: 20px;
+                    height: 20px;
+                    top: 10%;
+                    left: 3%;
+                    background: url('../images/5402395_encryption_lock_password_security_key_icon.svg') no-repeat center;
+                }
+            }
+
+            // input 樣式
+            .register-form-email,
+            .register-form-password,
+            .register-form-password-check {
+                width: 100%;
+                padding: 8px 0 8px 35px;
+                border: 1px solid #cccccc;
+                border-radius: 3px;
+
+                &:focus {
+                    outline: 1px solid #ff5e45;
+                }
+            }
+
+            // 已經有帳號 ?
+            .register-forget-account {
+                display: block;
+                margin: 5px 0 45px;
+                font-size: $font-sm;
+                color: #ff5e45;
+
+                &:focus {
+                    color: #ff2402;
+                }
+            }
+
+            // 註冊_客製化樣式
+            .register-btn {
+                padding: 7px 50px;
+                float: right;
+                border-radius: 3px;
+                background-color: #f56c23;
+                border-style: none;
+                color: white;
+                font-size: 0.88rem;
+                transition: background-color 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #d63031;
+                }
+
+                &:focus {
+                    background-color: #0984e3;
+                }
+            }
+        }
+    }
+}
